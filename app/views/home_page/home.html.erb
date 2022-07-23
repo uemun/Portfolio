@@ -1,2 +1,50 @@
-<h1>HomePage#home</h1>
-<p>Find me in app/views/home_page/home.html.erb</p>
+<!doctype html>
+<html lang="ja" >
+  <head>
+    <title>サボりノート</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body  class="text-center" >
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+  <div class="container">
+    <span class="skiplink-text">Skip to main content</span>
+  </div>
+</a>
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">サボりノート</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <li><%= link_to "ログイン", '#', class: "nav-link" %></li>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">サボり癖が治らないあなたへ</h1>
+    <p class="lead">どれだけ時間を無駄にしているか把握してみませんか？</p>
+    <p class="lead">
+      <a><%= link_to "新規登録", "#", class: "btn btn-lg btn-secondary" %></a>
+    </p>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+     
+    </div>
+  </footer>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>
+  window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+</script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
+<script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
+<script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
+<script src="/docs/4.3/assets/js/src/application.js"></script>
+<script src="/docs/4.3/assets/js/src/search.js"></script>
+<script src="/docs/4.3/assets/js/src/ie-emulation-modes-warning.js"></script>
+  </body>
+</html>
