@@ -1,40 +1,36 @@
 <!doctype html>
 <html lang="ja" >
   <head>
-    <title>Signin Template for Bootstrap · Bootstrap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="signin.css" rel="stylesheet">
   </head>
   <body  class="text-center" >
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-  <div class="container">
-    <span class="skiplink-text">Skip to main content</span>
-  </div>
-</a>
+    
+    <%= form_with(model: @user, local: true, class: "form-signin")do |f| %>
+      <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+      <%= f.label :name %>
+      <%= f.text_field :name, {class: "form-control"} %>
 
-<form class="form-signin" action="/users" method="post">
-  <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
-  <label for="inputName" class="sr-only">Name</label>
-  <input type="name" id="inputName" class="form-control" name="user[name]" placeholder="Name" required autofocus>
-  <label for="inputEmail" class="sr-only">Email address</label>
-  <input type="email" id="inputEmail" class="form-control" name="user[email]" placeholder="Email address" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" name="user[password]" placeholder="Password" required>
-  <label for="inputConfirmation" class="sr-only">Confirmation</label>
-  <input type="password" id="inputConfirmation" class="form-control" name="user[password_confirmation]" placeholder="Confirmation" required>
-  
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-  
-</form>
+      <%= f.label :email %>
+      <%= f.email_field :email, {class: "form-control"} %>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>
-  window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-</script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
-<script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
-<script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
-<script src="/docs/4.3/assets/js/src/application.js"></script>
-<script src="/docs/4.3/assets/js/src/search.js"></script>
-<script src="/docs/4.3/assets/js/src/ie-emulation-modes-warning.js"></script>
+      <%= f.label :password %>
+      <%= f.password_field :password, {class: "form-control"} %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, {class: "form-control"} %>
+
+      <%= f.submit "Create my account", {class: "btn btn-primary"} %>
+    <% end %>
+  
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script><script src="/docs/4.3/assets/js/vendor/anchor.min.js"></script>
+    <script src="/docs/4.3/assets/js/vendor/clipboard.min.js"></script>
+    <script src="/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js"></script>
+    <script src="/docs/4.3/assets/js/src/application.js"></script>
+    <script src="/docs/4.3/assets/js/src/search.js"></script>
+    <script src="/docs/4.3/assets/js/src/ie-emulation-modes-warning.js"></script>
   </body>
 </html>

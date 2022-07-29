@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>PortfolioApp</title>
     <%= csrf_meta_tags %>
@@ -7,9 +7,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="cover.css" rel="stylesheet">
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
     <%= yield %>
     
   </body>
