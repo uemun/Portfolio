@@ -1,0 +1,7 @@
+<%= form_with(url: password_resets_path, scope: :password_reset, local: true, class: "form-signin") do |f| %>
+      <h1 class="h3 mb-3 font-weight-normal">アカウントを探す</h1>
+      <%= f.label :email %>
+      <%= f.email_field :email, {class: 'form-control'} %>
+      
+      <%= f.submit "送信", {class: "btn btn-primary"} %>
+<% end %>      
