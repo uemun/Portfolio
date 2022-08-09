@@ -1,1 +1,31 @@
-<%= @user.name %>, <%= @user.email %>
+<div class="row">
+  <aside class="col-md-4">
+    <h1>
+      <%= @user.name %>
+    </h1>
+    <h2>今日サボった時間</h2>
+    <%= form_with(model: @micropost, local:true) do |f| %>
+     <%= f.number_field :time, min: '0', max: '24', step: '0.1', class:'input_form' %>
+     <%= f.submit '登録', class:'input_submit' %>
+    <% end %>
+    <h2>合計サボり時間</h2>
+    <p><%= @sum %>時間</p>
+    <h2>平均サボり時間</h2>
+    <p><%= @average %>時間</p>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3 class="microposts-count">Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <table class="timetable">
+          <tr>
+            <th>日付</th>
+            <th>時間</th>
+          </tr>
+          <%= render @microposts %>
+        </table>
+      </ol>
+      <%= will_paginate @microposts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    <% end %>
+  </div>
+</div>

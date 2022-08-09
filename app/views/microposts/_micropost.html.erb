@@ -1,0 +1,15 @@
+
+    
+      <tr>
+        <td><%= micropost.created_at.to_date %></td>
+        <td>
+          <%= micropost.time %>時間
+          <% if current_user?(micropost.user) %>
+            <%= link_to "delete", micropost, method: :delete,
+                                             data: { confirm: "You sure?" } %>
+          <% end %>
+        </td>
+        
+      </tr>
+    
+ 
