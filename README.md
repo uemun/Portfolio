@@ -10,7 +10,7 @@
 
 ## URL
 
-https://enigmatic-waters-95891.herokuapp.com
+https://enigmatic-waters-95891.herokuapp.com/
 
 ## テスト用アカウント
 
