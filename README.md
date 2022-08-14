@@ -1,24 +1,49 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名
 
-Things you may want to cover:
+「サボり日記」
 
-* Ruby version
+## アプリケーション概要
 
-* System dependencies
+1日に無駄にした時間を記録していくことで、学習を習慣化することをサポートするアプリケーションです。
 
-* Configuration
+## URL
 
-* Database creation
+https://enigmatic-waters-95891.herokuapp.com
 
-* Database initialization
+## テスト用アカウント
 
-* How to run the test suite
+メールアドレス：ryuto0313ryuto@icloud.com
 
-* Services (job queues, cache servers, search engines, etc.)
+パスワード：test0000
 
-* Deployment instructions
+## 利用方法
 
-* ...
+新規登録をして、プロフィールページから1日にサボった時間を記録していきます。
+
+## 目指した課題解決
+
+勉強をしなければいけないがサボってしまう人に、自分が無駄にしている時間を自覚してもらうことで、勉強時間を増やすことを目指しました。
+
+## 機能一覧
+
+* ユーザー登録、ログイン機能
+
+* 認証機能
+
+* 投稿機能（平均時間、合計時間表示機能）
+
+* ページネーション機能
+
+## 使用技術
+
+* Ruby 2.6.3p62
+
+* Ruby on Rails 6.0.4
+
+* PostgreSQL 14
+
+* Heroku
+
+* AWS(cloud9)
